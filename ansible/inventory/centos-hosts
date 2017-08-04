@@ -1,0 +1,14 @@
+[staas]
+remote-centos-host
+
+[warden]
+remote-centos-host
+
+[letsencrypt]
+remote-centos-host
+
+[nagios-clients]
+remote-centos-host
+
+[nagios-servers]
+remote-centos-host

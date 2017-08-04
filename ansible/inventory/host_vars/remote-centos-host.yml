@@ -1,0 +1,19 @@
+ansible_become: true
+ansible_user: centos
+ansible_host: < host ip >
+
+hostname: < hostname >
+timezone: < timezone location >
+
+scgui_history_minutes: 120
+scgui_branch: no_sidebar
+sample_data_src: "http://www.liberouter.org/~thorgrin/data.ipfix.bz2"
+mongod_cachesizeGB: 1
+
+nagios_client_hostgroups: [nemea-collectors, staas]
+nagios_client_contacts: []
+nagios_client_exclude_services: [nemea-running-modules, link-traffic]
+nagios_server_nopasswd: true
+
+letsencrypt_cert:
+    email: "< contact email >"
