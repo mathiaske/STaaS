@@ -7,6 +7,15 @@
 - name: Install NEMEA packages
   yum: "name={{ packages }} state=installed"
 
+- name: Create NEMEA reports path
+  file:
+    path: "{{ nemea_reporters.path }}"
+    state: directory
+    recurse: yes
+    owner: "nemead"
+    group: "nemead"
+  when: nemea_reporters.path is defined
+
 #- name: Set NEMEA supervisor default configuration
 #  shell: >
 #    cp -R {{ configuration.src }} {{ configuration.dest }}
